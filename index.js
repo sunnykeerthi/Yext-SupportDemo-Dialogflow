@@ -4,6 +4,7 @@ const dfff = require("dialogflow-fulfillment");
 const app = express();
 var axios = require("axios");
 const { provideCore } = require("@yext/answers-core");
+const POST = process.env.PORT || 3000;
 
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -176,6 +177,6 @@ app.post("/webhook", (req, res) => {
 /**
  * now listing the server on port number 3000 :)
  * */
-app.listen(3000, () => {
+app.listen(POST, () => {
   console.log("Server is Running on port 3000");
 });
