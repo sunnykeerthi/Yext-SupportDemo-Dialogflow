@@ -177,6 +177,6 @@ app.post("/webhook", (req, res) => {
 /**
  * now listing the server on port number 3000 :)
  * */
-app.listen(POST, () => {
+app.listen(PORT, () => {
   console.log("Server is Running on port 3000");
 });
