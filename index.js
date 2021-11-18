@@ -11,8 +11,8 @@ app.get("/", (req, res) => {
   res.send("Server Is Working......");
 });
 const core = provideCore({
-  apiKey: "aae767ec8fa55d59cced70dc2a1377b8",
-  experienceKey: "answers-help-site",
+  apiKey: process.env.API_KEY,
+  experienceKey: process.env.EXPERIENCE_KEY,
   locale: "en",
   experienceVersion: "PRODUCTION",
   /*endpoints: {
