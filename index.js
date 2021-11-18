@@ -4,7 +4,7 @@ const dfff = require("dialogflow-fulfillment");
 const app = express();
 var axios = require("axios");
 const { provideCore } = require("@yext/answers-core");
-const POST = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.get("/", (req, res) => {
