@@ -82,15 +82,11 @@ app.post("/webhook", (req, res) => {
           accessibilityText: "Dialogflow across platforms",
         };
         richResult.richContent[0].push(img);
-      }
-       console.log('-------');
-        console.log(answerText);
-        console.log(removeMd(answerText));
-       console.log('-------');
+      } 
       if (answerText) {
         var ansr = {
           type: "info",
-          subtitle: answerText,
+          subtitle: removeMd(answerText),
         };
         richResult.richContent[0].push(ansr);
       }
