@@ -134,7 +134,11 @@ app.post("/webhook", (req, res) => {
           };
           subRes.push(img);
         }
-        if (answerText) {
+        console.log('-------');
+        console.log(answerText);
+        console.log(removeMd(answerText));
+       console.log('-------');
+         if (answerText) {
           var ansr = {
             type: "info",
             subtitle: removeMd(answerText),
