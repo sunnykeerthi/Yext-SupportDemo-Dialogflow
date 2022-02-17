@@ -83,6 +83,10 @@ app.post("/webhook", (req, res) => {
         };
         richResult.richContent[0].push(img);
       }
+       console.log('-------');
+        console.log(answerText);
+        console.log(removeMd(answerText));
+       console.log('-------');
       if (answerText) {
         var ansr = {
           type: "info",
@@ -133,11 +137,7 @@ app.post("/webhook", (req, res) => {
             accessibilityText: "Dialogflow across platforms",
           };
           subRes.push(img);
-        }
-        console.log('-------');
-        console.log(answerText);
-        console.log(removeMd(answerText));
-       console.log('-------');
+        } 
          if (answerText) {
           var ansr = {
             type: "info",
