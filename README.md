@@ -1,4 +1,4 @@
-# Yext-Dialogflow
+# Yext Support Demo
 ### Softwares Required
 - [VS Code](https://code.visualstudio.com/Download) (or any other IDE)
 - [Node.js](https://nodejs.org/en/download/)
