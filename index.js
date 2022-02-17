@@ -5,6 +5,7 @@ const app = express();
 var axios = require("axios");
 const { provideCore } = require("@yext/answers-core");
 const PORT = process.env.PORT || 3000;
+const removeMd = require("remove-markdown");
 
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -136,7 +137,7 @@ app.post("/webhook", (req, res) => {
         if (answerText) {
           var ansr = {
             type: "info",
-            subtitle: answerText,
+            subtitle: removeMd(answerText),
           };
           subRes.push(ansr);
         }
